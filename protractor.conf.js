@@ -16,6 +16,8 @@ exports.config = {
     params: {
         defaultTimeout: 60000,
         onlinerByURL: "https://www.onliner.by/",
+        w3schools: 'https://www.w3schools.com/html/html_form_input_types.asp',
+        htmlbook: 'http://htmlbook.ru/html/select',
     },
 
 
