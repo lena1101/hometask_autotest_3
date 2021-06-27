@@ -4,6 +4,8 @@ import { AutofleaRepository } from "../objectRepository/autoflea.obj";
 import { AutofleaPage } from "../pageObjects/autoflea.page";
 import { HtmlbookPage } from "../pageObjects/htmlbook.page";
 import { W3Page } from "../pageObjects/w3school.page";
+import { DemoqaPage } from "../pageObjects/demoqa.page";
+import { OzonPage } from "../pageObjects/ozon.page";
 
 const defaultTimeout = browser.params.defaultTimeout;
 
@@ -12,6 +14,8 @@ export = function exampleSteps() {
     const autofleaPage = new AutofleaPage;
     const w3SchoolPage = new W3Page;
     const htmlbookPage = new HtmlbookPage;
+    const demoqaPage = new DemoqaPage;
+    const ozonPage = new OzonPage;
 
     //Default cucumber timeout
     this.setDefaultTimeout(600 * 1000);
@@ -62,15 +66,69 @@ export = function exampleSteps() {
         w3SchoolPage.radioCheck();
     });
 
-    this.Given(/^I am on w3docs page$/, async () => {
-        htmlbookPage.navigateTohtmlbook();
+    this.Given(/^I am on demoqa-select page$/, async () => {
+        demoqaPage.navigateToDemoqaSelect();
     });
 
     this.When(/^I click on select$/, async () => {
-        htmlbookPage.selectClick();
+        demoqaPage.selectClick();
     });
 
     this.Then(/^Option must be selected$/, async () => {
-        htmlbookPage.selectCheck();
+        demoqaPage.selectCheck();
+    });
+
+    this.Given(/^I am on demoqa-checkbox page$/, async () => {
+        demoqaPage.navigateToDemoqaCheckbox();
+    });
+
+    this.When(/^I click on expand button$/, async () => {
+        demoqaPage.buttonClick();
+    });
+
+    this.Then(/^The list must be expanded$/, async () => {
+        demoqaPage.listCheck();
+    });
+
+    this.When(/^I click on Note checkbox$/, async () => {
+        demoqaPage.clickCheckboxNotes();
+    });
+
+    this.Given(/^I am on demoqa-radiobutton page$/, async () => {
+        demoqaPage.navigateToDemoqaRadiobutton();
+    });
+
+    this.When(/^I click on radiobutton$/, async () => {
+        demoqaPage.radioButtonClick();
+    });
+
+    this.When(/^The value should be -Yes-$/, async () => {
+        demoqaPage.checkValue();
+    });
+
+    this.Given(/^I am on demoqa-button page$/, async () => {
+        demoqaPage.navigateToDemoqaButton();
+    });
+
+    this.When(/^I click on button 2 times$/, async () => {
+        demoqaPage.buttonDoubleclick();
+    });
+
+    this.When(/^The button double-clicked$/, async () => {
+        demoqaPage.clickCheck();
+    });
+
+
+    
+    this.Given(/^I am on Ozon page$/, async () => {
+        ozonPage.navigateToOzonByURL();
+    });
+
+    this.When(/^I click on Ozone Travel button$/, async () => {
+        ozonPage.headerLinkClick();
+    });
+
+    this.When(/^I see Ozone Travel logo$/, async () => {
+        ozonPage.checkValue();
     });
 }

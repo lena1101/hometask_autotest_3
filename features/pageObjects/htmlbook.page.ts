@@ -27,7 +27,7 @@ export class HtmlbookPage {
     }
 
     public async selectCheck() {
-        await expect(await this.htmlbookRepo.select2.element(by.cssContainingText('option', 'Чебурашка')).isSelected()).equal(true);
+        expect(await this.htmlbookRepo.select2.element(by.cssContainingText('option', 'Чебурашка')).isSelected()).equal(true);
     }
 
 }

@@ -18,6 +18,12 @@ exports.config = {
         onlinerByURL: "https://www.onliner.by/",
         w3schools: 'https://www.w3schools.com/html/html_form_input_types.asp',
         htmlbook: 'http://htmlbook.ru/html/select',
+        demoqa: 'https://demoqa.com',
+        demoqaSelect: 'https://demoqa.com/select-menu',
+        demoqaCheckbox: 'https://demoqa.com/checkbox',
+        demoqaRadiobutton: 'https://demoqa.com/radio-button',
+        demoqaButton: 'https://demoqa.com/buttons',
+        ozonByURL: 'https://www.ozon.ru/',
     },
 
 
