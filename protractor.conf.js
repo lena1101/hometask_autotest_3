@@ -15,15 +15,18 @@ exports.config = {
 
     params: {
         defaultTimeout: 60000,
-        onlinerByURL: "https://www.onliner.by/",
-        w3schools: 'https://www.w3schools.com/html/html_form_input_types.asp',
-        htmlbook: 'http://htmlbook.ru/html/select',
         demoqa: 'https://demoqa.com',
         demoqaSelect: 'https://demoqa.com/select-menu',
         demoqaCheckbox: 'https://demoqa.com/checkbox',
         demoqaRadiobutton: 'https://demoqa.com/radio-button',
         demoqaButton: 'https://demoqa.com/buttons',
+        demoqaModal: 'https://demoqa.com/webtables',
+        demoqaIframes: 'https://www.demoqa.com/frames', 
         ozonByURL: 'https://www.ozon.ru/',
+        amazonByURL: 'https://www.amazon.com/',
+        newyorkerByURL: 'https://www.newyorker.com/search',
+        newyorkerMain: 'https://www.newyorker.com/',
+        mozillaSelect: 'https://developer.mozilla.org/en-US/docs/Web',
     },
 
 

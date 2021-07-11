@@ -28,64 +28,35 @@ export class OzonPage {
         browser.navigate().to(browser.params.ozonByURL);
     }
 
-    // public navigateToDemoqaSelect() {
-    //     browser.navigate().to(browser.params.demoqaSelect);
-    // }
-
-    // public navigateToDemoqaCheckbox() {
-    //     browser.navigate().to(browser.params.demoqaCheckbox);
-    // }
-
-    // public navigateToDemoqaRadiobutton() {
-    //     browser.navigate().to(browser.params.demoqaRadiobutton);
-    // }
-
-    // public navigateToDemoqaButton() {
-    //     browser.navigate().to(browser.params.demoqaButton);
-    // }
-
-    // public async selectClick() {
-    //     await this.demoqaRepo.oldSelect.element(by.cssContainingText('option', 'Black')).click();
-    // }
-
-    // public async selectCheck() {
-    //     expect(await this.demoqaRepo.oldSelect.element(by.cssContainingText('option', 'Black')).isSelected()).equal(true);
-    // }
-
-    // public async buttonClick() {
-    //     await this.demoqaRepo.expandButton.click();
-    // }
-
-    // public async listCheck() {
-    //     expect(await this.hasClass(this.demoqaRepo.list, 'rct-node-expanded')).equal(true);
-    // }
-
-    // public async clickCheckboxNotes() {
-    //     await this.demoqaRepo.checkboxNotes.click();
-    // }
-
-    // public async radioButtonClick() {
-    //     await this.demoqaRepo.radiobuttonLabel.click();
-    // }
-    
-    // public async checkValue() {
-    //     expect(await this.demoqaRepo.value.getText()).equal('Yes');
-    // }
-
-    // public async buttonDoubleclick() {
-    //     await browser.actions().doubleClick(this.demoqaRepo.button).perform();
-    // }
-    
-    // public async clickCheck() {
-    //     expect(await this.demoqaRepo.clickedButton.getText()).equal('You have done a double click');
-    // }
-
     public async headerLinkClick() {
         await this.ozonRepo.headerLink.click();
     }
     
     public async checkValue() {
         expect(await this.ozonRepo.travelLogo.isPresent()).equal(true);
+    }
+
+    public async searchFieldClick() {
+        await this.ozonRepo.searchField.click();
+    }
+
+    public async checkList() {
+        expect(await this.ozonRepo.cityList.isPresent()).equal(true);
+    }
+
+    
+    public async catalogMenuButtonClick() {
+        await this.ozonRepo.catalogMenuButton.click();
+    }
+    
+    public async sportRestOption() {
+        browser.actions().mouseMove(this.ozonRepo.sportRestOption).perform();
+        // expect(await this.ozonRepo.sportRestOption.isPresent()).equal(true);
+    }
+
+    public async decatlonLogo() {
+        expect(await this.ozonRepo.decatlonLogo.isPresent()).equal(true);
+       
     }
 
 }

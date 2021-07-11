@@ -12,5 +12,19 @@ export class DemoqaRepository {
     readonly button: ElementFinder = element(by.css('#doubleClickBtn'));
     readonly clickedButton: ElementFinder = element(by.css('#doubleClickMessage'));
     
+    readonly addButton: ElementFinder = element(by.css('#addNewRecordButton'));
+    readonly modal: ElementFinder = element(by.css('.modal-content'));
+    readonly closeButton: ElementFinder = element(by.css('.close'));
+    readonly fieldFilling1: ElementFinder = element(by.css('#firstName'));
+    readonly submitButton: ElementFinder = element(by.css('#submit'));
+
+    readonly fieldFilling2: ElementFinder = element(by.css('#lastName'));
+    readonly fieldFilling3: ElementFinder = element(by.css('#userEmail'));
+    readonly fieldFilling4: ElementFinder = element(by.css('#age'));
+    readonly fieldFilling5: ElementFinder = element(by.css('#salary'));
+    readonly fieldFilling6: ElementFinder = element(by.css('#department'));
+
+    readonly iframe: ElementFinder = element(by.css('#frame1'));
+    readonly title: ElementFinder = element(by.css('#sampleHeading'));
 }
 
